@@ -31,8 +31,6 @@ object mariano {
 		return golosinas.all({ _golosina => _golosina.precio() < 10}) 
 	}
 	
-	
-	
 	method golosinaDeSabor(_sabor) {
 		return golosinas.find({ golosina => golosina.sabor() == _sabor })
 	}
@@ -44,8 +42,6 @@ object mariano {
 	method sabores() {
 		return golosinas.map({ golosina => golosina.sabor() }).asSet()
 	}
-
-
 
 	method golosinaMasCara() {
 		return golosinas.max( { _golosina => _golosina.precio() } )
